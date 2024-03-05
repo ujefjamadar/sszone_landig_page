@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor+</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg "
+        style="background-color: blueviolet;justify-content: space-between;height: 70px;">
+        <div class="container" style="justify-content: space-between;">
+
+
+            <div class="container-fluid " style="display: inline-flex;justify-content: space-between;">
+                <a class="navbar-brand" href="#"><b style="font-size: 30px;color: white;">Doctor+</b></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse ms-4" id="navbarSupportedContent">
+                    <form class="d-flex" role="search">
+                        <div class="search-container">
+                            <i class="fa fa-search"></i>
+                            <input type="text" placeholder="Search Doctors" name="search">
+                        </div>
+                    </form>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 "
+                        style="justify-content: space-around;margin-left:20% ;">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <button style="height: 40px;width: 70px;background-color: white;border: none;"
+                                href="#">LogIn</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container" style="height: 100%;width: 100%;">
+            <div class="left-col">
+                <div class="appointment-details">
+                    <h1><b>Find your nearby doctor and book your appointment to get treatment fast. </b></h1><br>
+                    <h1>Appointment Details</h1><br>
+                    <div class="patient-name">
+                        <label for="patientName" style="font-size: 2em;">Patient Name:</label>
+                        <br>
+                        <input type="text" id="patientName" name="patientName" placeholder="Enter patient name">
+                    </div>
+                    <div class="appointment-type" sty>
+                        <label style="font-size: 20px;" for="appointmentType"><b>Appointment
+                                Type:</b></label>
+                        <br><br>
+                        <button onclick="selectAppointmentType('consultant')" id="consultantBtn">Consultant</button>
+                        <button onclick="selectAppointmentType('treatment')" id="treatmentBtn">Treatment</button>
+                    </div>
+                    <br>
+                    <center>
+                        <button class="booking-button">Book Now</button>
+                    </center>
+                </div>
+            </div>
+            <div class="right-col">
+                <div class="image-container">
+                    <img src="dr1.jpg" alt="Appointment Image">
+                </div>
+            </div>
+        </div>
+        <div class="container" style="backdrop-filter: blur(10px);">
+
+            <div class="book_appointment" style="backdrop-filter: blur(10px);">
+                <div class="containe" style="padding: 30px;">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>Easy way to Book your Appointment</h2>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn"
+                                style="margin-left: 30%; background-color: antiquewhite;height: 60px;width: 200px;">Book
+                                Your Appointment</button>
+                        </div>
+                    </div><br>
+
+                    <div class="row"
+                        style="display: inline-flex; justify-content: space-between;align-items: center;gap: 150px;margin-left: 100px;">
+                        <div class="circle" style="text-align: center;">
+                            <i style="color: rgb(47, 202, 47); font-size: 30px; margin-bottom: 10px;margin-top: 10px;"
+                                class="fa-solid fa-location-dot"></i>
+                            <p style="font-size: 15px;">Select the location and search nearby doctors</p>
+                        </div>
+                        <div class="circle" style="text-align: center;">
+
+                            <i style="color: rgb(202, 65, 47); font-size: 30px; margin-bottom: 10px;margin-top: 10px;"
+                                class="fa-regular fa-clock"></i>
+                            <p style="font-size: 15px;">Schedule and book your date and time for appointment</p>
+                        </div>
+                        <div class="circle" style="text-align: center;">
+
+                            <i style="color: rgb(33, 30, 206); font-size: 30px; margin-bottom: 10px;margin-top: 10px;"
+                                class="fa-regular fa-credit-card"></i>
+
+                            <p style="font-size: 15px;">Easy way to make Payment in multiple gateways</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div><br>
+        <div class="container">
+
+
+            <div class="container" style="height: 100%;">
+                <div class="col">
+                    <div class="image-container">
+                        <img src="dr2.jpg" alt="Appointment Image">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="appointments" style="margin-right: 50px;">
+                        <h1><b>Experienced doctor analyse the patient giving them a proper treatment</h1><br>
+                        <h4 style="color: rgb(80, 46, 46);">Doctor availability <br><br>
+                            Treatment & Consulting <br><br>
+                            Top Specialist doctor <br><br>
+                            Apply coupon for treatment</h4><br>
+
+                        <center>
+                            <button
+                                style="background-color: white;width: 250px;border: 1px solid black;color: black;height: 50px;font-size: 20px;"
+                                class="booking-button"><b>Book Appointment</b></button>
+                        </center>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <div class="container" style="display: block;padding-bottom: 10px;">
+
+            <h2><b>Various specialist are here you <br>
+                    to take care of your Health</b></h2><br>
+            <h4>Doctor are available at any time to care <br>
+                your health</h4>
+            <br>
+            <button style="border: 1px solid rgb(19, 18, 18); height: 40px;width: 120px;background-color: white;">
+                Know more
+
+            </button>
+            <br>
+        </div>
+        <br>
+        <div class="specialty-container">
+            <div class="specialty-card">
+                <div class="specialty-icon dental">
+                    <i style="color: gold;" class="fa-solid fa-tooth"></i>
+                </div>
+
+                <p>
+                    Dental doctor to take care of your teeth and gives treatment and provide solution and proper
+                    medicine.
+                </p>
+            </div>
+            <div class="specialty-card">
+                <div class="specialty-icon eye">
+                    <i style="color: rgb(10, 173, 238);" class="fa-regular fa-eye"></i>
+                </div>
+
+                <p>
+                    Eye Specialist to take care of your eye check the eye sight and eye ball rotation </p>
+            </div>
+            <div class="specialty-card">
+                <div class="specialty-icon neuro">
+                    <i style="color: #d413cb;" class="fa-solid fa-brain"></i>
+                </div>
+
+                <p>
+                    Nero specialist the nervous system is the important to all giving the best treatment
+                </p>
+            </div>
+        </div>
+        <div class="container">
+
+            <div class="customer-review">
+                <div class="row">
+                    <h2>Customer Review <br><br>
+                        Feedback about the service</h2>
+                </div>
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="review-card">
+                                <div class="review-name" style="display: inline-flex;">
+                                    <div class="reviewlogo">
+                                        A
+                                    </div>&nbsp;&nbsp; Arun
+                                </div>
+                                <div class="review-header">
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+
+                                </div>
+                                <div class="review-body">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur. Mauris ut a ultrices erat orci lobortis
+                                        malesuada tempus ornare. Aliquam vulputate nec.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="review-card">
+
+                                <div class="review-name" style="display: inline-flex;">
+                                    <div class="reviewlogo" style="background-color: green;">
+                                        A
+                                    </div>&nbsp;&nbsp; Anish
+                                </div>
+                                <div class="review-header">
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+
+                                </div>
+                                <div class="review-body">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur. Curabitur quis sagittis vel nunc
+                                        venenatis et eu ipsum. Sit feugiat.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="review-name" style="display: inline-flex;">
+                                        <div class="reviewlogo" style="background-color: rgb(126, 53, 53);">
+                                            A
+                                        </div>&nbsp;&nbsp; Avesh
+                                    </div>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+
+                                </div>
+                                <div class="review-body">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur. Blandit adipiscing morbi volutpat eget.
+                                        Pellentesque in sagittis tortor tincidunt.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="row" style="display: inline-flex; align-items: center;">
+                <div class="col">
+                    <h3 style="margin-right: 10px;"><b>Doctor +</b></h3>
+                </div>
+                <div class="col " style="display: inline-flex;margin-left:550px;">
+                    <!-- <input type="email" placeholder="Enter your Mail here..." style="height: 30px; width: 300px;"> -->
+                    <div class="input-group" style="width: 360px;">
+                        <input type="text" class="form-control" placeholder="Enter your Email ID">
+
+                        <button
+                            style="background-color: rgb(30, 199, 148);width: 90px;text-align: center; height: auto;border-radius: 0 0 0 5px;border: none;"
+                            class="">Sign Up</button>
+                    </div>
+                    <!-- <button style="margin-left: 10px;">send</button> -->
+                </div>
+
+
+            </div>
+            <br><br>
+
+            <div class="row">
+                <div class="footer-column">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+
+                </div>
+                <div class="footer-column">
+                    <h3>Information</h3>
+                    <ul>
+
+                        <li><a href="#">Sign Up</a></li>
+                        <li><a href="#">Join Community</a></li>
+                        <li><a href="#">Teams</a></li>
+                    </ul>
+
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="#">Help & Support</a></li>
+                        <li><a href="#">Partner with us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div><br>
+            <center>
+
+                <div class="social"
+                    style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+
+                    <div class="row">
+                        <h3>Follow Us</h3>
+                    </div>
+
+                    <div class="row" style="display: flex; justify-content: center; gap: 10px;">
+
+                        <ul style="list-style: none; padding: 0; margin: 0; display: flex; gap: 10px;">
+                            <li><a href=""><i class="fab fa-facebook-f fa-2x" style="color: #0f2350;"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in fa-2x" style="color: #0e97e0;"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-x-twitter"
+                                        style="color: #030303;font-size: 25px;"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram fa-2x" style="color: #d413cb;"></i></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </center>
+        </div>
+    </footer>
+
+</body>
+
+</html>
