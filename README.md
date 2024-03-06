@@ -1,2 +1,2 @@
 # sszone_landig_page
-The first of my Intership at SSZone Technologies
+The first task of Intership at SSZone Technologies
